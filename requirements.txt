@@ -7,4 +7,5 @@ catboost
 xgboost
 Flask
 tensorflow
+tensorflow-decision-forests
 #-e .
