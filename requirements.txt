@@ -9,4 +9,5 @@ Flask
 tensorflow
 streamlit
 watchdog
+dill
 #-e .
