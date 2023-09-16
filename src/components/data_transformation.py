@@ -74,14 +74,6 @@ class DataTransformation:
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
             
-            # input_feature_train_list = [np.array(arr) for arr in input_feature_train_arr]
-            # input_feature_test_list = [np.array(arr) for arr in input_feature_test_arr]
-
-            # # Stack the list of arrays vertically to maintain the same number of columns (68)
-            # input_feature_train_stacked = np.vstack(input_feature_train_list)
-            # input_feature_test_stacked = np.vstack(input_feature_test_list)
-
-            
             target_feature_train_df = target_feature_train_df.values
             target_feature_train_df_v2 = target_feature_train_df.reshape(-1, 1) 
             
