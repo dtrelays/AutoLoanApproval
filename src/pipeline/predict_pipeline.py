@@ -9,23 +9,10 @@ class PredictPipeline:
     def __init__(self):
         pass
 
-    def predict(self,features):
+    def predict(self,features,model,preprocessor):
         try:
-            model_path=os.path.join("artifacts","model.pkl")
-            preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
-            print("Before Loading")
-            model=load_object(file_path=model_path)
-            preprocessor=load_object(file_path=preprocessor_path)
-            print("After Loading")
             data_scaled=preprocessor.transform(features)
-            
-            loaded_model = model["model"]
-            loaded_params = model["params"]
-
-            # Create a new instance of the model with the loaded hyperparameters
-            model_with_loaded_params = loaded_model.set_params(**loaded_params)            
-            
-            preds=model_with_loaded_params.predict(data_scaled)
+            preds = model.predict(data_scaled)
             return preds
         
         except Exception as e:

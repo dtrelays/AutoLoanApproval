@@ -10,4 +10,5 @@ tensorflow
 streamlit
 watchdog
 dill
+shap
 #-e .
