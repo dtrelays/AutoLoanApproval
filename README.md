@@ -2,7 +2,7 @@
 
 # Two Wheeler Loan Approval Scoring App
 
-![2W Loan](artifacts/project_image.png)
+![2W Loan](artifacts/loan_image.png)
 
 ## Overview
 
